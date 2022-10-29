@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Sign Up Page</h2>
+
+<form name = "myForm" action="form_ok.php" method ="POST">
+
+    <!-- Name -->
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" ><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" ><br><br>
+
+    <!-- ID -->
+
+    <label for="userID"> ID : </label><br>
+    <input type="text" id="userID" name="userID"><br>
+    <label for="pw">Password:</label><br>
+    <input type="password" id="pw" name="pw" ><br><br>
+
+    <!-- Sex -->
+    <Label> Sex : </Label>
+    <input type="radio" id ="male" name ="gender" value ="male" checked>Male
+    <input type="radio" id = "female" name="gender" value="female">Female<br><br>
+
+    <!-- date of birth -->
+    Date of birth : <input type="date" name="bday" min="1990-01-01"><br><br>
+
+    <!-- Age -->
+    Age : <input type="number" name="age" min="1" max="100"><br><br>
+
+    Major : <select name="major" id="major">
+        <option value ="Computer Science">Computer Science</option>
+        <option value ="Engineer">Engineer</option>
+        <option value ="Statistics">Statistics</option>
+        <option value ="Art">Art</option>
+    </select>
+    <br><br>
+
+
+
+    <!-- Day -->
+
+    Available days (Duplicate possible) : <br>
+    <input type="checkbox" name= "firstDay" value="Monday"> Monday<br>
+    <input type="checkbox" name= "secondDay" value="Tuesday"> Tuesday<br>
+    <input type="checkbox" name= "thirdDay" value="Wednesday"> Wednesday<br>
+    <input type="checkbox" name= "fourthDay" value="Thursday"> Thursday<br>
+    <input type="checkbox" name= "fifthDay" value="Friday"> Friday<br>
+    <input type="checkbox" name= "sixthDay" value="Saturday"> Saturday<br>
+    <input type="checkbox" name= "seventhDay" value="Sunday"> Sunday<br><br>
+
+    <!-- short self introducing-->
+    About me (introducing) : <br>
+    <textarea name = "aboutme" id ="aboutMe" rows="4" cols="50"> Introduce yourself</textarea><br><br>
+
+
+
+    <input type="submit" value="제출">
+</form>
+
+</body>
+</html>
+
+

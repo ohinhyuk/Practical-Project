@@ -1,0 +1,125 @@
+@media only screen and (max-width: 768px){
+    /* Index part*/
+    th{
+        font-size: 0.7rem;
+    }
+    #btn-search{
+        max-width : 80px;
+    }
+
+    #window-search{
+        max-width : 200px;
+        margin-right: 10px;
+        margin-left: auto;
+    }
+
+    #add-button{
+        margin : 10px;
+    }
+    #firstRow{
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding-top: 5px;
+    }
+    .header{
+    }
+    *{
+        box-sizing: border-box;
+    }
+    .row div{
+        padding: 8px;
+        text-align: center;
+        border: solid 3px mediumaquamarine;
+        /*background-color : #33b5e5;*/
+    }
+    .container{
+        display: grid;
+    }
+    #page{
+        display: flex;
+        justify-content : center;
+        margin-top : 10px;
+    }
+    #person-icon{
+        margin : 10px;
+        margin-left: 25px;
+        margin-top: 35px;
+    }
+
+    /* add part */
+
+    #input-form div{
+        display: block;
+        font-size : 0.7rem;
+    }
+    label{
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (min-width: 769px) {
+
+
+    #add-button {
+        margin: 20px;
+    }
+
+    #firstRow {
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding-top: 5px;
+    }
+
+    .header {
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .row div {
+        padding: 8px;
+        text-align: center;
+        border: solid 3px mediumaquamarine;
+        /*background-color : #33b5e5;*/
+    }
+
+    .container {
+        display: grid;
+    }
+
+    #page {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+
+    #person-icon {
+        margin: 10px;
+        margin-left: 25px;
+        margin-top: 50px;
+    }
+}
+
+
+.form-row {
+    padding: 15px;
+    padding-left: 20px;
+    margin-left: 20px;
+}
+#row1{
+    margin-right: 5%;
+}
+#lname,#fname {
+    width : 300px;
+}
+#input-form{
+    display : block;
+    margin-left: 25%;
+    border: 1px solid white;
+    border-radius: 20px;
+    background: white;
+    margin: 15%;
+    padding-left: 5%;
+    margin-top: 5%;
+}

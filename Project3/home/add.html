@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width =device-width , initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/e879e74340.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+
+    <style>
+        @import url("my.css");
+
+        div{
+            font-weight: bold;
+            font-size: 18px;
+        }
+        body{background-color : lightcyan;}
+
+    </style>
+</head>
+
+<body>
+
+
+<div id="for-inline">
+    <nav class="navbar navbar-info bg-info justify-content-between">
+        <a class="navbar-brand" style="color: white">Sign Up Page</a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="window-search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit" id="btn-search">Search</button>
+        </form>
+    </nav>
+</div>
+<div id="input-form">
+
+    <i class="fa-solid fa-user-plus fa-2x" style="position: relative; left: -5% ; top: 0 ;margin-bottom: 20px" > Sign Up </i>
+    <form name = "myForm" action="add_ok.php" onsubmit="return validateForm()" method ="POST">
+
+
+    <div class="form-row">
+        <div class="col-md-5 mb-3" id ="row1">
+            <!-- Name -->
+            <label for="fname">First name</label><br>
+            <input type="text" id="fname" name="fname" ><br>
+        </div>
+
+        <div class="col-md-5 mb-3" id="row2">
+            <label for="lname">Last name</label><br>
+            <input type="text" id="lname" name="lname" >
+        </div>
+
+    </div>
+
+    <div class ="form-row">
+    <!-- Sex -->
+        <div class="col-md-5 mb-3" id ="row1">
+    <Label style="margin-right: 10px"> Sex : </Label>
+    <input type="radio" id ="male" name ="gender" value ="male" style="margin-right: 5px ;margin-top: 7px;" checked>  Male
+    <input type="radio" id = "female" name="gender" value="female" style="margin-left: 10px; margin-right:5px;margin-top: 7px;">  Female
+        </div>
+
+        <div class="col-md-5 mb-3" id ="row2">
+        <!-- date of birth -->
+    Date of birth : <input type="date" name="bday" min="1990-01-01" style="margin-left: 10px">
+        </div>
+    </div>
+
+
+    <div class ="form-row">
+        <div class="col-md-5 mb-3" id="row1">
+            <!-- Age -->
+            Age (Under 100): <input type="number" name="age" min="1" max="99" style="margin-left: 20px; width: 100px;"><br><br>
+        </div>
+
+        <div class="col-md-5 mb-3" id="row2">
+
+            <!-- Day -->
+            Available days (Duplicate possible) <br><br>
+            <input type="checkbox" name= "firstDay" value="Monday"> <label class="col-5" >Monday</label>
+            <input type="checkbox" name= "secondDay" value="Tuesday"> <label class="col-5">Tuesday</label><br>
+            <input type="checkbox" name= "thirdDay" value="Wednesday" > <label class="col-5" >Wednesday</label>
+            <input type="checkbox" name= "fourthDay" value="Thursday"> <label class="col-5">Thursday</label><br>
+            <input type="checkbox" name= "fifthDay" value="Friday" > <label class="col-5" >Friday</label>
+            <input type="checkbox" name= "sixthDay" value="Saturday"> <label class="col-5">Saturday</label><br>
+            <input type="checkbox" name= "seventhDay" value="Sunday"> <label class="col-5">Sunday</label>
+        </div>
+    </div>
+
+    <div class ="form-row" >
+    <!-- short self introducing-->
+        <label class="col-md-5 mb-3" >Remark (>= 10 characters):</label> <br>
+    <textarea name = "Remark" id ="Remark" rows="4" cols="30" class="col-md-5 mb-3" style=""> Personal Uniqueness </textarea>
+    </div>
+    <div class ="form-row">
+    agreement (essential) :
+    <input type="checkbox" name="agree" value="agree" style="margin-top: 8px;margin-left: 10px;">
+    </div>
+    <div class="form-row">
+        <div class="col-md-5 mb-3" id="row1"></div>
+        <div class="col-md-5 offset-9 mb-3" id="row2">
+            <input type="submit" value="submit" class="btn btn-info" style="pull-float : right;">
+        </div>
+    </div>
+</form>
+
+<script>
+    function validateForm() {
+        var fn = document.myForm.fname;
+
+        if(fn.value == ""){
+            alert("Please Input your first name!");
+            fn.focus();
+            return false;
+        }
+
+        var ln = document.myForm.lname;
+
+        if(ln.value == ""){
+            alert("Please Input your last name!");
+            ln.focus();
+            return false;
+        }
+
+        var mnd = document.myForm.firstDay;
+        var tud = document.myForm.secondDay;
+        var wed = document.myForm.thirdDay;
+        var thd = document.myForm.fourthDay;
+        var frd = document.myForm.fifthDay;
+        var std = document.myForm.sixthDay;
+        var sud = document.myForm.seventhDay;
+
+        if(!mnd.checked && !tud.checked && !wed.checked && !thd.checked && !frd.checked && !std.checked && !sud.checked){
+            alert("Please check possible days At least 1.");
+            return false;
+        }
+
+        var rm = document.myForm.Remark;
+
+        if(rm.length < 10 ){
+            alert("Please write at least 10 characters");
+            rm.focus();
+            return false;
+        }
+
+        var agree = document.myForm.agree;
+
+        if(!agree.checked){
+            alert("Please check agreement , it is essential..!");
+            agree.focus();
+            return false;
+        }
+
+
+
+
+    }
+
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+</div>
+</body>
+</html>
+
+
